@@ -142,4 +142,34 @@ geospark-viz-1.1.3.jar .
 
 sudo mv *.jar /usr/lib/spark/jars/
 
+nano checkin.csv
+
+-88.331492,32.324142,hotel
+-88.175933,32.360763,gas
+-88.388954,32.357073,bar
+-88.221102,32.35078,restaurant
+
+
+now open your main class in Emacs and replace the code with the following code to see whether things are working: 
+
+/**Code Starts here**/
+
+import org.datasyslab.geospark.spatialOperator.RangeQuery
+import org.datasyslab.geospark.spatialOperator.JoinQuery
+import org.datasyslab.geospark.spatialRDD.RectangleRDD
+import com.vividsolutions.jts.geom.Envelope
+import org.datasyslab.geospark.spatialOperator.KNNQuery
+import org.datasyslab.geospark.spatialRDD.PointRDD
+import com.vividsolutions.jts.geom.Coordinate
+import com.vividsolutions.jts.geom.GeometryFactory
+import com.vividsolutions.jts.geom.Point
+
+val pointRDDInputLocation = "/home/hadoop/checkin.csv"
+val pointRDDOffset = 0 // The point long/lat starts from Column 0
+val pointRDDSplitter = FileDataSplitter.CSV
+val carryOtherAttributes = true // Carry Column 2 (hotel, gas, bar...)
+var objectRDD = new PointRDD(sc, pointRDDInputLocation, pointRDDOffset, pointRDDSplitter, carryOtherAttributes)
+queryEnvelope
+objectRDD
+
 Hopefully, you followed this through, this is what works for me, if this does not work for you, it is because I gave incomplete information not incorrect one. Comment so I may help. Enjoy!!
