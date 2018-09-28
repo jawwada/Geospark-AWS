@@ -1,0 +1,16 @@
+ensimeConfig
+:q
+exit
+compile
+run
+ensimeConfig
+exit
+projectInfo
+compile
+exit
+compile
+run
+exit
+compile
+run
+exit

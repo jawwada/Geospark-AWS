@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/home/hadoop/hello/src/main/scala/Hello.scala:4:20: not found: type SparkConf[0m
+[0m[[0m[31merror[0m] [0m[0m    val conf = new SparkConf().setAppName("Spark Pi")[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hadoop/hello/src/main/scala/Hello.scala:5:21: not found: type SparkContext[0m
+[0m[[0m[31merror[0m] [0m[0m    val spark = new SparkContext(conf)[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
