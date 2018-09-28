@@ -141,3 +141,5 @@ geospark-sql_2.3-1.1.3.jar .
 geospark-viz-1.1.3.jar .
 
 sudo mv *.jar /usr/lib/spark/jars/
+
+Hopefully, you followed this through, this is what works for me, if this does not work for you, it is because I gave incomplete information not incorrect one. Comment so I may help. Enjoy!!
